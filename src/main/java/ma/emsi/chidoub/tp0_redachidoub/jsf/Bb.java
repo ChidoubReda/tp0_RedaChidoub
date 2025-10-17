@@ -132,6 +132,9 @@ public class Bb implements Serializable {
         }
         this.reponse += question.toLowerCase(Locale.FRENCH) + "||";
         // La conversation contient l'historique des questions-réponses depuis le début.
+        String reversed = new StringBuilder(question).reverse().toString();
+        this.reponse += "\nVoici la phrase inversée : " + reversed;
+
         afficherConversation();
         return null;
     }
@@ -188,3 +191,4 @@ public class Bb implements Serializable {
     }
 
 }
+
